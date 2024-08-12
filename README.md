@@ -27,6 +27,18 @@ Grabs the client IP.
 print(Kry.getIP())
 ```
 
+* Kry.setFPSCAP()
+Sets the client FPS Cap.
+```lua
+Kry.setFPSCAP(120)
+```
+
+* Kry.getFPS()
+Grabs the client FPS.
+```lua
+print(Kry.getFPS())
+```
+
 * Kry.getPING()
 Grabs the client PING.
 ```lua
@@ -112,8 +124,7 @@ print(Kry.getExecutorLVL())
 ```
 
 * Kry.spoofExecutorLVL()
-Spoofs the printidentity() statement.
+Spoofs the client executor LVL.
 ```lua
 Kry.spoofExecutorLVL(69)
-printidentity()
 ```
