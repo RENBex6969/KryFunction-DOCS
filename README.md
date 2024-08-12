@@ -110,3 +110,10 @@ Grabs the client executor LVL.
 ```lua
 print(Kry.getExecutorLVL())
 ```
+
+* Kry.spoofExecutorLVL()
+Spoofs the printidentity() statement.
+```
+Kry.spoofExecutorLVL(69)
+printidentity()
+```
