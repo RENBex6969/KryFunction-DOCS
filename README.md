@@ -113,7 +113,7 @@ print(Kry.getExecutorLVL())
 
 * Kry.spoofExecutorLVL()
 Spoofs the printidentity() statement.
-```
+```lua
 Kry.spoofExecutorLVL(69)
 printidentity()
 ```
