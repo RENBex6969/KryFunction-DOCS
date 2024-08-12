@@ -106,7 +106,7 @@ print(Kry.getMaxMEMORY())
 ```
 
 * Kry.getMaxMEMORY()
-Grabs the client targeted GPU (MB).
+Grabs the client targeted MEMORY (MB).
 ```lua
 print(Kry.getMaxMEMORY())
 ```
