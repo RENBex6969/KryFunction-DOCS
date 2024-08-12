@@ -3,8 +3,8 @@ HttpService = game:GetService("HttpService")
 
 -- // Variables 2
 TimeFunction = RunService:IsRunning() and time or os.clock
-LastIteration, Start
-FrameUpdateTable = {}
+LastIteration = 0
+Start = 0
 
 -- // Kry
 Kry = {}
@@ -21,7 +21,7 @@ end
 Kry.getIP = function()
   response_IP = game:HttpGet("https://api.ipify.org/?format=json")
   data_IP = HttpService:JSONDecode(response_IP)
-  IP = data_IP.ip(IP)
+  IP = data_IP.ip
   return tostring(IP)
 end
 
@@ -30,6 +30,7 @@ Kry.setFPSCAP = function(args)
 end
 
 Kry.getFPS = function()
+  FrameUpdateTable = {}
   Client_FPS = 0
   function HeartbeatUpdate()
 	  LastIteration = TimeFunction()
@@ -124,6 +125,28 @@ Kry.spoofExecutorLVL = function(arg)
   KryHOOK2 = hookfunction(orgsethreadidentity, function()
     return arg
   end)
+ end
 end
 
+print("HWID: " .. Kry.getHWID())
+print("IP: " .. Kry.getIP())
+print("FPS: " .. Kry.getFPS())
+print("Ping: " .. Kry.getPING())
+print("Max Ping: " .. Kry.getMaxPING())
+print("Network Received: " .. Kry.getNetworkRECV())
+print("Max Network Received: " .. Kry.getMaxNetworkRECV())
+print("Network Sent: " .. Kry.getNetworkSent())
+print("Max Network Sent: " .. Kry.getMaxNetworkSent())
+print("CPU: " .. Kry.getCPU())
+print("Max CPU: " .. Kry.getMaxCPU())
+print("GPU: " .. Kry.getGPU())
+print("Max GPU: " .. Kry.getMaxGPU())
+print("Memory: " .. Kry.getMEMORY())
+print("Max Memory: " .. Kry.getMaxMEMORY())
+print("Executor Name: " .. Kry.getExecutorNAME())
+print("Executor Level: " .. Kry.getExecutorLVL())
+
+print("[KryFunction] If no errors than successfully added.")
+
 return Kry
+
