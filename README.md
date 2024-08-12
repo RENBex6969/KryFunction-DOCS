@@ -34,7 +34,7 @@ Kry.setFPSCAP(120)
 ```
 
 * Kry.getFPS()
-Grabs the client FPS.
+Grabs the client FPS. (Most precise)
 ```lua
 print(Kry.getFPS())
 ```
