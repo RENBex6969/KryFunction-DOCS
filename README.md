@@ -3,7 +3,7 @@
 > **Importing to your Script**
 
 ```lua
-Kry = loadstring(game:HttpGet(''))()
+Kry = loadstring(game:HttpGet('https://raw.githubusercontent.com/RENBex6969/KryFunction-DOCS/main/source.lua'))()
 ```
 
 > **Functions**
