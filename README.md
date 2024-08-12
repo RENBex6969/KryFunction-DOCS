@@ -2,6 +2,8 @@
 
 > **Importing to your Script**
 
+Will be adding more!
+
 ```lua
 Kry = loadstring(game:HttpGet('https://raw.githubusercontent.com/RENBex6969/KryFunction-DOCS/main/source.lua'))()
 ```
