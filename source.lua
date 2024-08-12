@@ -1,4 +1,12 @@
+RunService = game:GetService("RunService")
 HttpService = game:GetService("HttpService")
+
+-- // Variables 2
+TimeFunction = RunService:IsRunning() and time or os.clock
+LastIteration, Start
+FrameUpdateTable = {}
+
+-- // Kry
 Kry = {}
 
 Kry.HttpGet = function(url)
@@ -15,6 +23,23 @@ Kry.getIP = function()
   data_IP = HttpService:JSONDecode(response_IP)
   IP = data_IP.ip(IP)
   return tostring(IP)
+end
+
+Kry.setFPSCAP = function(args)
+  setfpscap(args)
+end
+
+Kry.getFPS = function()
+  Client_FPS = 0
+  function HeartbeatUpdate()
+	  LastIteration = TimeFunction()
+	  for Index = #FrameUpdateTable, 1, -1 do
+		  FrameUpdateTable[Index + 1] = FrameUpdateTable[Index] >= LastIteration - 1 and FrameUpdateTable[Index] or nil
+	  end
+	  FrameUpdateTable[1] = LastIteration
+	  Client_FPS = tostring(math.floor(TimeFunction() - Start >= 1 and #FrameUpdateTable or #FrameUpdateTable / (TimeFunction() - Start)))
+  end
+  return Client_FPS
 end
 
 Kry.getPING = function()
