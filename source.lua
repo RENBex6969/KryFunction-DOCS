@@ -128,25 +128,5 @@ Kry.spoofExecutorLVL = function(arg)
  end
 end
 
-print("HWID: " .. Kry.getHWID())
-print("IP: " .. Kry.getIP())
-print("FPS: " .. Kry.getFPS())
-print("Ping: " .. Kry.getPING())
-print("Max Ping: " .. Kry.getMaxPING())
-print("Network Received: " .. Kry.getNetworkRECV())
-print("Max Network Received: " .. Kry.getMaxNetworkRECV())
-print("Network Sent: " .. Kry.getNetworkSent())
-print("Max Network Sent: " .. Kry.getMaxNetworkSent())
-print("CPU: " .. Kry.getCPU())
-print("Max CPU: " .. Kry.getMaxCPU())
-print("GPU: " .. Kry.getGPU())
-print("Max GPU: " .. Kry.getMaxGPU())
-print("Memory: " .. Kry.getMEMORY())
-print("Max Memory: " .. Kry.getMaxMEMORY())
-print("Executor Name: " .. Kry.getExecutorNAME())
-print("Executor Level: " .. Kry.getExecutorLVL())
-
-print("[KryFunction] If no errors than successfully added.")
-
 return Kry
 
